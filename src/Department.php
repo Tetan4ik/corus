@@ -8,27 +8,31 @@ use Doctrine\ORM\Mapping\Table;
 
 /**
  * @Entity
- * @Table(name="user")
+ * @Table(name="department")
  */
-Class User
-{
+Class Department{
 
     /**
      * @Id
      * @GeneratedValue(strategy="AUTO")
      * @Column(type="integer")
+     * @var integer
      */
     protected $id;
-
-    /** @Column(type="string")
-     *  @Column(type="string")
+    /**
+     * @Column(type="string")
+     * @var string
      */
     protected $name;
+    /**
+     * @Column(type="string")
+     * @var string
+     */
+    protected $parent;
 
     /**
      * @return mixed
      */
-
     public function getId()
     {
         return $this->id;
@@ -57,4 +61,22 @@ Class User
     {
         $this->name = $name;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getParent()
+    {
+        return $this->parent;
+    }
+
+    /**
+     * @param mixed $parent
+     */
+    public function setParent($parent)
+    {
+        $this->parent = $parent;
+    }
+
+
 }
