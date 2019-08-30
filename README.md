@@ -1,2 +1,5 @@
 # corus
-test task
+dump database tet.sql
+
+
+ORM - > Doctrine
