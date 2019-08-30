@@ -1,10 +1,7 @@
 <?php
 
-use Doctrine\ORM\Mapping\Column;
-use Doctrine\ORM\Mapping\Entity;
-use Doctrine\ORM\Mapping\GeneratedValue;
-use Doctrine\ORM\Mapping\Id;
-use Doctrine\ORM\Mapping\Table;
+use Doctrine\ORM\Query\Expr\Join;
+use Doctrine\ORM\QueryBuilder;
 
 /**
  * @Entity
@@ -21,7 +18,7 @@ Class User
     protected $id;
 
     /** @Column(type="string")
-     *  @Column(type="string")
+     * @Column(type="string")
      */
     protected $name;
 
@@ -57,4 +54,6 @@ Class User
     {
         $this->name = $name;
     }
+
+
 }

@@ -1,28 +1,25 @@
 <?php
 
-use Doctrine\ORM\Mapping\Column;
-use Doctrine\ORM\Mapping\Entity;
-use Doctrine\ORM\Mapping\GeneratedValue;
-use Doctrine\ORM\Mapping\Id;
-use Doctrine\ORM\Mapping\Table;
-
 /**
  * @Entity
- * @Table(name="user_department")
+ * @Table(name="userDepartment")
  */
-Class User_Department{
+Class UserDepartment{
 
     /**
      * @Id
      * @GeneratedValue(strategy="AUTO")
      * @Column(type="integer")
      * @var integer
-     */protected $id;
+     */
+    protected $id;
+
     /**
      * @Column(type="integer")
      * @var integer
      */
     protected $userId;
+
     /**
      * @Column(type="integer")
      * @var integer

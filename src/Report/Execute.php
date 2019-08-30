@@ -18,6 +18,7 @@ Class Execute
     public function run($type, $connector, $entity, $entityManager, $filter)
     {
 
+        // we can also write more connectors and use
         $connector = "\Report\Connectors\\".$connector;
 
         /**
@@ -25,7 +26,6 @@ Class Execute
          */
         $connector = new $connector;
         $data = $connector->getData($entity, $entityManager, $filter);
-
 
         /**
          * @var $type IType

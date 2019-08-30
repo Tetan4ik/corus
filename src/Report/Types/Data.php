@@ -4,7 +4,7 @@ namespace Report\Types;
 
 use Report\IType;
 
-Class Html implements IType {
+Class Data implements IType {
 
     public function reportData($data)
     {

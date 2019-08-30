@@ -1,16 +1,11 @@
 <?php
 
-use Doctrine\ORM\Mapping\Column;
-use Doctrine\ORM\Mapping\Entity;
-use Doctrine\ORM\Mapping\GeneratedValue;
-use Doctrine\ORM\Mapping\Id;
-use Doctrine\ORM\Mapping\Table;
-
 /**
  * @Entity
  * @Table(name="department")
  */
-Class Department{
+Class Department
+{
 
     /**
      * @Id
@@ -78,5 +73,18 @@ Class Department{
         $this->parent = $parent;
     }
 
+    /**
+     * @param $qb \Doctrine\ORM\QueryBuilder
+     * @return mixed
+     */
+    public function getAll($qb){
+
+        $qb->select('d')
+            ->from('department','d');
+
+        return $qb->getQuery()->execute();
+
+
+    }
 
 }
