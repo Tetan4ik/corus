@@ -1,2 +1,2 @@
 # corus
-test task
+dump database tet.sql
